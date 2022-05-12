@@ -1,0 +1,263 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+section{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background: url(IMAGES/grass.jpeg)no-repeat;
+    background-size: cover;
+    background-position: center; 
+}
+
+header{
+    position: relative;
+    top: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo{
+    position: relative;
+    color: #000;
+    font-size: 30px;
+    text-decoration: none;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+header .head_list a{
+    color: #000;
+    text-decoration: none;
+    border-radius: 20px;
+    letter-spacing: 1px;
+    padding: 2px 15px;
+    font-weight: 500;
+}
+
+header .head_list a:not(:last-child){
+    margin-right: 30px;
+}
+
+header .head_list a:hover{
+    background:#fff;
+    transition: 1s;
+}
+
+.content{
+    max-width: 600px;
+    margin: 50px;
+}
+
+.content .paragraph h2{
+    color: #0a0a0a;
+    font-size: 60px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+    line-height: 60px;
+}
+
+.content .paragraph h2 span{
+    color: #fff;
+    font-size: 50px;
+    font-weight: 600;
+}
+
+.content .paragraph p{
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 40px;
+    /* color: #fff; */
+}
+
+.content .paragraph .media{
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    font-weight: 600;
+    border-radius: 5px;
+    background:  #0c4f60;
+    letter-spacing: 2px;
+}
+
+.content .paragraph .media:hover{
+    background: #266a80;
+    transition: 1s;
+}
+
+.media_icons{
+    padding: 7px 10px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: auto;
+    /* font-size: 35px; */
+    text-align: center;
+}
+
+.media_icons a{
+    position: relative;
+    color: #111;
+    font-size: 30px;
+}
+
+.media_icons a:not(:last-child){
+    margin: 50px;
+}
+
+label{
+    display: none;
+}
+
+#check{
+    z-index: 3;
+    display: none;
+}
+
+/* responsive style */
+
+@media (max-width: 960px){
+    header .head_list{
+        display: none;
+    }
+
+    label{
+        display: block;
+        font-size: 25px;
+        cursor: pointer;
+    }
+
+    label:hover{
+        color: #fff;
+        transition: 1s;
+    }
+
+    label .fa-xmark{
+        display: none;
+    }
+
+    #check:checked ~ header .head_list{
+        z-index: 2;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        display: flex;
+        background: rgba(114, 223, 255, 0.9);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #check:checked ~ header .head_list a{
+        font-weight: 700;
+        margin-right: 0;
+        margin-bottom: 50px;
+        letter-spacing: 2px;
+    }
+
+    #check:checked ~ header label .fa-bars{
+        display: none;
+    }
+
+    #check:checked ~ header label .fa-xmark{
+        z-index: 2;
+        position: fixed;
+        display: block;
+    }
+
+    label .fa-bars{
+        position: absolute;
+    }
+
+    header .logo{
+        position: absolute;
+        bottom: -6px;
+    }
+
+    .content .paragraph h2{
+        font-size: 45px;
+        line-height: 50px;
+    }
+
+    .content .paragraph h2 span{
+        font-size: 40px;
+        font-weight: 600;
+    }
+
+    .content .paragraph p{
+        font-size: 14px;
+    }
+
+    @media (max-width: 560px){
+        .content .paragraph h2{
+            font-size: 35px;
+            line-height: 40px;
+        }
+    
+        .content .paragraph h2 span{
+            font-size: 30px;
+            font-weight: 600;
+        }
+    
+        .content .paragraph p{
+            font-size: 14px;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
